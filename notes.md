@@ -1,4 +1,5 @@
 ### Django API 
+## CP/01/26
 
 *** Setup ***
 ''' Check current python version 
@@ -52,10 +53,105 @@
 
 *** Text Editors   ***
  - Upto you, in my case i am using vs code
- 
+
+
+### CP-02/26
+*** Web APIs ***
+`REST- Representatinal state transfer`
+
+### CP-03/26
+
+
+### Traditional Django
+- Navigate to the existing code directory on the Desktop and make sure you are not in a current
+  virtual environment. You should not see (.venv) before the shell prompt. If you do, use the
+  command deactivate to leave it. Make a new directory called library, create a new virtual
+  environment, activate it, and install Django.
+
+(.venv) PS D:\python-backend> deactivate `# 1`
+PS D:\python-backend> cd code `# 2`
+PS D:\python-backend\code> mkdir library `# 3`
+
+
+    Directory: D:\python-backend\code
+
+
+Mode                 LastWriteTime         Length Name                                                                                         
+----                 -------------         ------ ----                                                                                         
+d-----         6/13/2026  12:19 PM                library                                                                                      
+
+
+PS D:\python-backend\code> cd library `# 4`
+PS D:\python-backend\code\library> python -m venv .venv `# 5`
+PS D:\python-backend\code\library> .venv\Scripts\Activate.ps1 `# 6`
+(.venv) PS D:\python-backend\code\library> `Now our env is activated`
+
+Atraditional Django website consists of a single project with multiple apps representing discrete
+functionality. Let’s create a new project with the start project command called django_project.
+Don’t forget to include the period . at the end which installs the code in our current directory.
+If you do not include the period, Django will create an additional directory by default.
+
+## install 
+
+- pip install django 
+
+## Then create the project 
+- $ python -m django startproject django_project .
+(.venv) 
+
+├── django_project
+│ ├── __init__.py
+| ├── asgi.py
+│ ├── settings.py
+│ ├── urls.py
+│ └── wsgi.py
+├── manage.py
+└── .venv/
+
+The manage.py file is not part of django_project but is used to execute various Django com
+mandssuchasrunning the local web server or creating a new app. Let’s use it now with migrate
+to sync thedatabase with Django’s default settings and start up the local Django web server with
+runserver.
+
+ompra@OMPRAk-DE-ASUS-PR MINGW32 /d/python-backend/code/library (main)
+$ python manage.py migrate
+
+- After migrate run server
+
+ompra@OMPRAk-DE-ASUS-PR MINGW32 /d/python-backend/code/library (main)
+$ python manage.py runserver
+
+
+- After that - open it, http://127.0.0.1:8000/
 
 
 
+### First app
+
+The next step is to add our first app which we’ll call books. Stop the local server by typing
+Control+c and then run the startapp command plus our app name to create it.
+
+` python manage.py startapp books`
+
+- Nowlet’s explore the app files Django has automatically created for us.
+
+├── books
+│ ├── __init__.py
+│ ├── admin.py
+│ ├── apps.py
+│ ├── migrations
+│ │ └── __init__.py
+│ ├── models.py
+│ ├── tests.py
+│ └── views.py
 
 
+Each app has a __init__.py file identifying it as a Python package and there are 6 new files
+created:
+• admin.py is a configuration file for the built-in Django Admin app
+• apps.py is a configuration file for the app itself
+• migrations/ is a directory that stores migrations files for database changes
+• models.py is where we define our database models
+• tests.py is for our app-specific tests
+• views.py is where we handle the request/response logic for our web app
 

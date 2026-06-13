@@ -155,3 +155,12 @@ created:
 • tests.py is for our app-specific tests
 • views.py is where we handle the request/response logic for our web app
 
+
+# admin 
+user name -op
+email - op@gmail.com
+pw- AS##8788364473
+
+## Ch-04/26  Library API
+
+

@@ -141,7 +141,69 @@ result = not(a > b)
 print(result)
 
 
+#Chap -4: Control Structures
 
+# Conditional Statements
+
+age = 20
+if age >=18:
+    print("You are eligible for vote.")
+else:
+    print("You are not eligible baby")
+
+# You can also have multiple conditions using :
+
+score = 75
+if score >=90:
+    print("Grade: A")
+elif score >=80:
+    print("Grade: B")
+elif score >=70:
+    print("Grade: C")
+else:
+    print("Grade: D or lower")
+
+
+# Loops in python 
+
+# For Loops 
+#  Iterate over a list
+fruits =["apple", "banana", "cherry"]
+for fruit in fruits:
+    print("Current fruits: ", fruit)
+
+
+# While Loops
+# Using a while loop to count to 5
+count =1
+while count <=5:
+    print("count: ", count)
+    count +=1
+
+# Nested Loops and Cnditinal structures
+# Nested for loops to iterate over a grid layout
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(f'({i}, {j})', end=' ')
+    print()
+
+# Find the first even number in each list
+list_of_lists =[[1,3,5], [2,4,6],[9,7,5]]
+
+for sublist in list_of_lists:
+    for number in sublist:
+        if number % 2==0:
+            print("First even number in list :", number)
+            break
+
+
+# Combining Loops and Conditional Statements
+# Print number from 1 to 10 , skip number divisible by 3
+
+for i in range(1,10):
+    if i % 3==0:
+        continue
+    print(i)
 
 
 

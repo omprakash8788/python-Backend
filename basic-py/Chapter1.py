@@ -206,5 +206,71 @@ for i in range(1,10):
     print(i)
 
 
+# Chapter 5 : Functions and Modules 
+
+def greet():
+    print("Hello, welcome to python")
+# Calling the function
+greet()
+
+
+# Example of a unction with Parameters and a Return value:
+def add_numbers(num1, num2):
+    result = num1 + num2
+    return result
+# Calling the function with parameters
+sum_result = add_numbers(7,8)
+print(sum_result)
+
+# Using Default Parameters and Keyword Arguments:
+def describe_pet(pet_name, animal_type='dog'):
+ print(f"I have a {animal_type} named {pet_name}.")
+# Calling function with default parameter
+describe_pet(pet_name='Rex')
+# Calling function with both parameters explicitly
+describe_pet(pet_name='Whiskers', animal_type='cat')
+
+
+# Importing modules 
+
+import math
+# Using a function from the math module
+print("The square root of 16 is:", math.sqrt(16))
+
+
+# Importing Specific Functions: You can also choose to import
+# specific functions from a module:
+
+from math import sqrt, pow
+# Now no need to use 'math.' prefix
+print("The square root of 25 is:", sqrt(25))
+print("2 raised to the power 5 is:", pow(2, 5))
+
+
+# Chapter 6: Exception Handling
+
+numbers =[1,2,3]
+try:
+    print(numbers[3])
+except IndexError as e:
+    print("Error: ", e)
+
+
+# Handling mutiple exceptions
+try:
+    value = int(input("Please enter a number: "))
+    result = 10 /value
+except ValueError:
+    print("You must enter a valid integer.")
+except ZeroDivisionError:
+    print("Division by zero is not allowed")
+else:
+    print("Result: ", result)
+finally:
+    print("This block is always excuted")
+
+
+
+
 
 

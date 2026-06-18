@@ -269,8 +269,36 @@ else:
 finally:
     print("This block is always excuted")
 
+# Raising Excetions 
 
+def check_age(age):
+    if age < 0 :
+        raise ValueError("Age cannot be negative.")
+    elif age < 18:
+        print("You are not old enough")
+    else:
+        print("You are welcome.")
 
+try:
+    user_check=int(input("Enter your age: "))
+    check_age(user_check)
+except ValueError as e:
+    print("Error: ", e)
 
+# Example of a Custom Exception:
+class NegativeAgeError(Exception):
+ """Exception raised when the age is negative."""
+ def __init__(self, age):
+  self.message = f"Age {age} is not valid. Age cannot be negative."
+ super().__init__(self.message)
 
+def check_age(age):
+ if age < 0:
+  raise NegativeAgeError(age)
+ print(f"Age {age} is valid.")
+try:
+ check_age(-5)
+except NegativeAgeError as e:
+  print(e)
 
+# Chap7 - Working with Files 

@@ -8,5 +8,5 @@
  - After that install necessary packages
  4.  pip install fastapi uvicorn
 
- 5. Run app - uvicorn main:app --reload
+ 5. Run ->  uvicorn main:app --reload
  

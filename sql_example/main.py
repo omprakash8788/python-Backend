@@ -2,7 +2,9 @@ from database import SessionLocal
 from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 from database import User
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
+from typing import Optional
+
 
 
 app=FastAPI()
@@ -20,6 +22,9 @@ def read_user(db:Session=Depends(get_db)):
     users=db.query(User).all()
     return users
 
+class UserCreate(BaseModel):
+    name:str
+    email:EmailStr
 
 class UserBody(BaseModel):
     name:str

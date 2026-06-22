@@ -507,6 +507,20 @@
 # 1. Django
 # 2. Flash
 
+# Chapter 11: Debugging and Testing
+
+# def calculate_sum(numbers): 
+#     total = 0 
+#     for number in numbers: 
+#         total += number 
+#         print(f"Added {number}, total now {total}")  # Debug
+#         print
+#         return total 
+
+# print(calculate_sum([1, 2, 3, 4])) 
+
+
+# Chapter 13: Data Analysis with Python
 
 
 

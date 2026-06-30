@@ -5,7 +5,7 @@ pwd_context = CryptContext(
 
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
-from models import User
+from database import User
 def add_user(
 session: Session,
 username: str,

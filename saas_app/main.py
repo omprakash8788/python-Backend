@@ -1,3 +1,4 @@
+
 from contextlib import asynccontextmanager
 from typing import Annotated
 
@@ -16,10 +17,12 @@ from schemas import (
 )
 
 
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     Base.metadata.create_all(bind=get_engine())
     yield
+
 
 
 app = FastAPI(
@@ -63,3 +66,4 @@ def register(
         message="User created",
         user=user_response,
     )
+

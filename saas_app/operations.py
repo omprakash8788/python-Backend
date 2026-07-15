@@ -28,3 +28,4 @@ email: str,
         session.rollback()
         return
     return db_user
+
